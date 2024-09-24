@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -39,13 +39,13 @@
         </div>
     </header>
 
-    <!-- Popup de Promoção -->
-    <div id="promo-popup" class="promo-popup">
+    <div class="promo-popup" id="promoPopup">
         <div class="promo-content">
-            <span class="close-btn">&times;</span>
-            <h2>Promoção Imperdível!</h2>
-            <p>Ganhe 10% de desconto em sua primeira compra!</p>
-            <a href="/promocoes" class="promo-btn">Saiba Mais</a>
+            <span class="close-btn" id="closePopup">&times;</span>
+            <img src="assets/banner5.png" alt="Promoção" class="promo-img">
+            <h2>Desconto Exclusivo!</h2>
+            <p>Descubra nossas ofertas especiais e deixe seu pet mais feliz com nossos produtos de qualidade.</p>
+            <a href="#" class="promo-btn">Ver Mais</a>
         </div>
     </div>
 
@@ -184,12 +184,25 @@
     </section>
 
     <!-- Contato Section -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
             <h2>Entre em Contato</h2>
-            <p>Telefone: (51) 99287-0231</p>
-            <p>Email: petegato2024@gmail.com</p>
-            <p>Saldanha da gama, 256 Partenon - loja 4</p>
+            <p>Estamos sempre prontos para atender você! Entre em contato pelos nossos canais abaixo:</p>
+            <div class="contact-details">
+                <div class="info">
+                    <i class="fas fa-envelope"></i>
+                    <p><strong>Email:</strong> petegato2024@gmail.com</p>
+                </div>
+                <div class="info">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><strong>Telefone:</strong> (51) 99287-0231</p>
+                </div>
+                <div class="info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Endereço:</strong> Saldanha da gama, 256 Partenon - loja 4</p>
+                </div>
+                
+            </div>
         </div>
     </section>
 
@@ -202,14 +215,14 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Pet & Gatô. Todos os direitos reservados.</p>
             <div class="social-icons">
-                <a href="#">Facebook</a>
-                <a href="https://www.instagram.com/shop_petegato/">Instagram</a>
-                <a href="#">WhatsApp</a>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <br>
-            <br>
+            <p>&copy; 2024 Pet & Gatô. Todos os direitos reservados.</p>
             <p>Desenvolvido por Brian - Analista de Dados e Desenvolvedor Web</p> <!-- Informação do autor -->
         </div>
     </footer>
@@ -222,15 +235,25 @@
             header.classList.toggle('menu-open');
         });
 
-        // Exibir o pop-up quando a página for carregada
-        window.onload = function () {
-            document.getElementById("promo-popup").style.display = "flex";
-        }
+       // Exibe o popup após alguns segundos ou em resposta a algum evento
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('promoPopup').style.display = 'flex';
+        }, 2000); // Exibe o popup após 2 segundos
+    };
 
-        // Fechar o pop-up quando o botão for clicado
-        document.querySelector('.close-btn').onclick = function () {
-            document.getElementById("promo-popup").style.display = "none";
+    // Fecha o popup quando o botão de fechar for clicado
+    document.getElementById('closePopup').onclick = function() {
+        document.getElementById('promoPopup').style.display = 'none';
+    };
+
+    // Fecha o popup se o usuário clicar fora do conteúdo
+    window.onclick = function(event) {
+        var popup = document.getElementById('promoPopup');
+        if (event.target == popup) {
+            popup.style.display = 'none';
         }
+    };
 
         // Seleciona o carrossel
         const carousel = document.getElementById('carousel');

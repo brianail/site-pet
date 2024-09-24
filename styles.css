@@ -12,104 +12,124 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-/* Estilos do Popup */
+
+/* Estilos gerais do popup */
 .promo-popup {
     display: none; /* Oculto por padrão */
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75); /* Fundo escuro com transparência */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
     justify-content: center;
     align-items: center;
-    animation: fadeIn 0.5s ease; /* Animação de fade-in */
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out; /* Animação de fade-in suave */
 }
 
-/* Animação de entrada */
+/* Animação de fade-in */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 .promo-content {
-    background: linear-gradient(135deg, #752C6E, #51BEA2, #F27EB4);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     max-width: 500px;
     width: 90%;
-    transform: scale(0.9); /* Efeito inicial de escala */
-    animation: popUp 0.3s ease forwards; /* Animação de 'pop' */
+    text-align: center;
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideUp 0.5s ease-in-out forwards; /* Animação de deslizamento */
 }
 
-/* Animação de crescimento do popup */
-@keyframes popUp {
-    from { transform: scale(0.9); }
-    to { transform: scale(1); }
+/* Animação de deslizamento */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Estilo da imagem no popup */
+.promo-img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.promo-img:hover {
+    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+}
+
+/* Estilo do título */
 .promo-content h2 {
-    color: white;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    font-family: 'Arial', sans-serif;
-    letter-spacing: 1px;
+    font-size: 2.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
+/* Estilo do parágrafo */
 .promo-content p {
-    color: white;
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-    letter-spacing: 0.5px;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
 
-/* Estilizando o botão */
+/* Botão de ação */
 .promo-btn {
-    background-color: white;
-    color: #ff7e5f;
-    padding: 12px 25px;
-    text-decoration: none;
+    background-color: #752C6E; /* Cor de fundo moderna */
+    color: white;
+    padding: 12px 30px;
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 30px;
-    display: inline-block;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .promo-btn:hover {
-    background-color: #ff7e5f;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: #51BEA2; /* Cor ao passar o mouse */
 }
 
 /* Botão de fechar */
 .close-btn {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 20px;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #555;
     cursor: pointer;
-    color: white;
     transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-    color: #feb47b;
+    color: #F27EB4; /* Cor ao passar o mouse */
 }
 
 /* Tornando o popup responsivo */
 @media (max-width: 768px) {
     .promo-content {
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     .promo-content h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .promo-content p {
@@ -118,6 +138,10 @@ body {
 
     .promo-btn {
         padding: 10px 20px;
+    }
+
+    .promo-img {
+        max-width: 180px; /* Ajuste da imagem para telas menores */
     }
 }
 
@@ -464,18 +488,6 @@ footer {
     animation: fadeIn 1s ease-in-out;
 }
 
-footer .social-icons a {
-    color: #fff;
-    margin: 0 0.5rem;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    color:#F27EB4;
-    transform: scale(1.2);
-}
 
 /* Animações customizadas */
 @keyframes fadeIn {
@@ -565,4 +577,66 @@ footer .social-icons a:hover {
     display: flex;
     width: 100%;
     height: 100%;
+}
+
+.contact-section {
+    padding: 4rem 0;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #6CC2D9;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info {
+    display: flex;
+    align-items: center;  /* Alinha verticalmente no centro */
+    justify-content:left;  /* Alinha horizontalmente no centro */
+    gap: 40px;  /* Espaçamento entre o ícone e o texto */
+    padding: 1rem;
+}
+
+.info i {
+    font-size: 24px;  /* Tamanho do ícone */
+    color:#752C6E;  /* Cor do ícone */
+}
+
+.info p {
+    margin: 0;  /* Remove o espaçamento padrão do parágrafo */
+    font-size: 1.1rem;  /* Tamanho da fonte */
+    color: #666;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    justify-content: space-around;
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    color: white;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color:#F27EB4;
 }
