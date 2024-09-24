@@ -28,12 +28,6 @@ body {
     animation: fadeIn 0.5s ease-in-out; /* Animação de fade-in suave */
 }
 
-/* Animação de fade-in */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .promo-content {
     background: white;
     padding: 40px 30px;
@@ -46,18 +40,6 @@ body {
     transform: translateY(-50px);
     opacity: 0;
     animation: slideUp 0.5s ease-in-out forwards; /* Animação de deslizamento */
-}
-
-/* Animação de deslizamento */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Estilo da imagem no popup */
@@ -120,29 +102,6 @@ body {
 
 .close-btn:hover {
     color: #F27EB4; /* Cor ao passar o mouse */
-}
-
-/* Tornando o popup responsivo */
-@media (max-width: 768px) {
-    .promo-content {
-        padding: 30px 20px;
-    }
-
-    .promo-content h2 {
-        font-size: 2rem;
-    }
-
-    .promo-content p {
-        font-size: 1.1rem;
-    }
-
-    .promo-btn {
-        padding: 10px 20px;
-    }
-
-    .promo-img {
-        max-width: 180px; /* Ajuste da imagem para telas menores */
-    }
 }
 
 h1 {
@@ -220,70 +179,6 @@ header nav ul li a:hover {
     background-color: #333;
     margin: 4px 0;
     transition: 0.3s;
-}
-
-/* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem;
-    }
-
-    header nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background-color: #fff;
-        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100%;
-        padding: 2rem;
-        display: none; /* Oculto por padrão */
-    }
-
-    header nav ul li {
-        margin-bottom: 1.5rem;
-    }
-
-    header nav ul li a {
-        font-size: 1.5rem;
-        color: #333;
-    }
-
-    .menu-toggle {
-        display: flex;
-        z-index: 999;
-    }
-
-    /* Mostrar menu ao clicar no botão hambúrguer */
-    .menu-open nav ul {
-        display: flex;
-    }
-
-    .menu-open nav {
-        transform: translateX(0);
-    }
-
-    /* Animação do botão hambúrguer */
-    .menu-open .menu-toggle span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-open .menu-toggle span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-open .menu-toggle span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
 }
 
 .hero {
@@ -447,19 +342,6 @@ iframe.lightwidget-widget {
     transform: translateY(-10px);
 }
 
-/* Responsividade para mobile */
-@media (max-width: 768px) {
-    .testimonial-card {
-        width: calc(50% - 2rem);
-    }
-}
-
-@media (max-width: 480px) {
-    .testimonial-card {
-        width: 100%;
-    }
-}
-
 /* Estilo do botão de WhatsApp */
 .whatsapp-button {
     width: 60px;
@@ -521,38 +403,6 @@ footer a i {
     transform: rotate(20deg);
 }
 
-/* Animações customizadas */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 #brands {
     padding: 4rem 0;
@@ -588,16 +438,6 @@ footer a i {
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Animação para o carrossel */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%); /* Move o carrossel inteiro para a esquerda */
-    }
 }
 
 /* Clonando os itens para dar efeito de looping */
@@ -745,6 +585,88 @@ footer a i {
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        padding: 2rem;
+        display: none; /* Oculto por padrão */
+    }
+
+    header nav ul li {
+        margin-bottom: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 999;
+    }
+
+    /* Mostrar menu ao clicar no botão hambúrguer */
+    .menu-open nav ul {
+        display: flex;
+    }
+
+    .menu-open nav {
+        transform: translateX(0);
+    }
+
+    /* Animação do botão hambúrguer */
+    .menu-open .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-open .menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .promo-content {
+        padding: 30px 20px;
+    }
+
+    .promo-content h2 {
+        font-size: 2rem;
+    }
+
+    .promo-content p {
+        font-size: 1.1rem;
+    }
+
+    .promo-btn {
+        padding: 10px 20px;
+    }
+
+    .promo-img {
+        max-width: 180px; /* Ajuste da imagem para telas menores */
+    }
+    .testimonial-card {
+        width: calc(50% - 2rem);
+    }
     .promo-card {
         width: calc(50% - 2rem);
     }
@@ -753,5 +675,70 @@ footer a i {
 @media (max-width: 480px) {
     .promo-card {
         width: 100%;
+    }
+    .testimonial-card {
+        width: 100%;
+    }
+
+}
+
+
+/* Animação para o carrossel */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move o carrossel inteiro para a esquerda */
+    }
+}
+
+/* Animações customizadas */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Animação de deslizamento */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
