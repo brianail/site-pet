@@ -487,7 +487,39 @@ footer {
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
+.autor-info a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
 
+.autor-info a i {
+    margin-right: 8px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.autor-info a:hover {
+    color: #51BEA2;
+}
+
+footer a:active, footer a:focus {
+    outline: none;
+    color: #F27EB4;
+}
+
+/* Para garantir que o ícone seja exibido corretamente */
+footer a i {
+    transition: transform 0.3s ease;
+}
+
+.autor-info a:hover i {
+    transform: rotate(20deg);
+}
 
 /* Animações customizadas */
 @keyframes fadeIn {
@@ -639,4 +671,87 @@ footer {
 
 .social-icons a:hover {
     color:#F27EB4;
+}
+
+#promocoes {
+    padding: 4rem 0;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+#promocoes h2 {
+    font-size: 2.5rem;
+    color:#6CC2D9;
+    margin-bottom: 3rem;
+    transition: color 0.3s ease;
+}
+
+.promo-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.promo-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 2rem);
+    margin: 1rem;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.promo-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.promo-info {
+    padding: 1.5rem;
+}
+
+.promo-info h3 {
+    font-size: 1.5rem;
+    color: #51BEA2;
+    margin-bottom: 1rem;
+}
+
+.promo-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.promo-btn {
+    background-color: #51BEA2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.promo-btn:hover {
+    background-color: #752C6E;
+    color: white;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .promo-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-card {
+        width: 100%;
+    }
 }
