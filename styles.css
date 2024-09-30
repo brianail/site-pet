@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -227,6 +226,47 @@ h2 {
     animation: fadeInUp 1.5s forwards;
 }
 
+/* Seção principal com o post de vídeo à esquerda */
+.video-section {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* Estilos para o post de vídeo */
+  .video-post {
+    width: 60%;
+  }
+
+  .video-post video{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Adiciona bordas arredondadas ao card */
+    overflow: hidden; /* Garante que o conteúdo respeite as bordas */
+    transition: box-shadow 0.3s ease-in-out; /* Suaviza a transição da sombra */
+  }
+  
+  .story-text {
+    padding: 1rem;
+  }
+  
+  .story-text p {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: left;
+    padding: 2rem;
+  }
+  
+  .story-text strong {
+    color: #d63384; /* Destaque para a marca */
+  }
+  
+  .story-text span {
+    font-weight: bold;
+  }
+  
 .product-gallery {
     display: flex;
     justify-content: space-between;
@@ -296,7 +336,7 @@ iframe.lightwidget-widget {
     text-align: center;
 }
 
-#testimonials h2 {
+h2 {
     font-size: 2.5rem;
     color: #6CC2D9;
     margin-bottom: 3rem;
@@ -351,6 +391,7 @@ iframe.lightwidget-widget {
     right: 30px;
     z-index: 1000;
     border-radius: 50%;
+    transition: background-color 0.3s;
 } 
 
 .whatsapp-button img {
@@ -360,6 +401,20 @@ iframe.lightwidget-widget {
 
 .whatsapp-button:hover {
     background-color: #128c7e;
+}
+
+/* Animação de vibração */
+@keyframes vibrate {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.vibrating {
+    animation: vibrate 0.3s linear infinite; /* Animação de vibração */
 }
 
 footer {
@@ -584,7 +639,7 @@ footer a i {
 }
 
 /* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
+@media (max-width: 890px) {
     header {
         padding: 1rem;
     }
@@ -670,6 +725,20 @@ footer a i {
     .promo-card {
         width: calc(50% - 2rem);
     }
+
+    .video-section {
+        flex-direction: column; /* Muda para coluna */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .video-post {
+        width: 100%; /* O vídeo ocupará a largura total */
+        margin-bottom: 1rem; /* Adiciona um espaçamento abaixo do vídeo */
+    }
+
+    .story-text {
+        text-align: center; /* Centraliza o texto */
+    }
 }
 
 @media (max-width: 480px) {
@@ -725,12 +794,12 @@ footer a i {
     }
 }
 
-
 /* Animação de fade-in */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 /* Animação de deslizamento */
 @keyframes slideUp {
     from {

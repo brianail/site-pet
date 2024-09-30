@@ -13,21 +13,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="caminho/do/seu/favicon.ico" type="image/x-icon">
-
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Pet & Gatô",
-          "url": "https://www.petegato.com.br",
-          "logo": "https://www.petegato.com.br/caminho/do/seu/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+55-11-99999-9999",
-            "contactType": "Customer Service"
-          }
-        }
-        </script>
+    <meta property="og:title" content="Pet & Gatô - Seu Pet Shop de Confiança" />
+    <meta property="og:description"
+        content="Oferecemos rações premium, brinquedos e produtos personalizados para o seu pet!" />
+    <meta property="og:image" content="https://www.petegato.com.br/caminho/do/seu/logo.png" />
+    <meta property="og:url" content="https://www.petegato.com.br" />
+    <meta property="og:type" content="website" />
 </head>
 
 <body>
@@ -43,7 +34,8 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#products">Produtos</a></li>
-                    <li><a href="#testimonials">Testemunhos</a></li>
+                    <li><a href="/site-pet/banho.html">Banho e Tosa</a></li>
+                    <li><a href="#testimonials">Avaliações</a></li>
                     <li><a href="#brands">Marcas</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
@@ -73,6 +65,45 @@
             <p>Oferecemos comedouros personalizados, arranhadores exclusivos e muito mais, tudo feito com amor e
                 dedicação.</p>
             <a href="#products" class="btn hero-btn">Conheça Nossos Produtos</a>
+        </div>
+    </section>
+
+    <section id="video-section">
+        <div class="container">
+            <h2>Novidades</h2>
+            <!-- Video Post -->
+            <div class="video-section">
+                <div class="video-post">
+                    <video autoplay muted loop playsinline>
+                        <source src="/site-pet/assets/postcards.mp4" type="video/mp4">
+                        Seu navegador não suporta o vídeo.
+                    </video>
+                </div>
+
+                <div class="story-text">
+                    <p><strong>Aproveite as nossas promoções incríveis na Pet & Gatô!</strong><br>
+                        Os melhores produtos para o seu pet, desde rações premium até brinquedos e acessórios personalizados que farão toda a diferença no bem-estar do seu companheiro de quatro patas. Nossas promoções incluem descontos especiais em arranhadores artesanais e comedouros de madeira sob medida. Não perca a chance de garantir produtos de qualidade com preços imperdíveis! Confira agora e faça parte dessa jornada de cuidados e carinho com seu pet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de Marcas de Rações -->
+    <section id="brands">
+        <div class="container">
+            <h2>Rações</h2>
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carousel">
+                    <div class="carousel-item"><img src="assets/marcas/marca1.png" alt="Marca 1"></div>
+                    <div class="carousel-item"><img src="assets/marcas/marca2.png" alt="Marca 2"></div>
+                    <div class="carousel-item"><img src="assets/marcas/marca3.png" alt="Marca 5"></div>
+                    <div class="carousel-item"><img src="assets/marcas/marca4.png" alt="Marca 3"></div>
+                    <div class="carousel-item"><img src="assets/marcas/marca5.png" alt="Marca 4"></div>
+                    <div class="carousel-item"><img src="assets/marcas/marca7.png" alt="Marca 7"></div>
+                    <div class="carousel-item"><img src="assets/marcas/marca6.png" alt="Marca 6"></div>
+                    <div class="carousel-item"><img src="assets/marcas/marca8.png" alt="Marca 8"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -240,22 +271,7 @@
         </div>
     </section>
 
-    <!-- Carrossel de Marcas de Rações -->
-    <section id="brands">
-        <div class="container">
-            <h2>Nossas Marcas de Rações</h2>
-            <div class="carousel-container">
-                <div class="carousel-wrapper" id="carousel">
-                    <div class="carousel-item"><img src="assets/marcas/marca1.png" alt="Marca 1"></div>
-                    <div class="carousel-item"><img src="assets/marcas/marca2.png" alt="Marca 2"></div>
-                    <div class="carousel-item"><img src="assets/marcas/marca3.png" alt="Marca 5"></div>
-                    <div class="carousel-item"><img src="assets/marcas/marca4.png" alt="Marca 3"></div>
-                    <div class="carousel-item"><img src="assets/marcas/marca5.png" alt="Marca 4"></div>
-                    <div class="carousel-item"><img src="assets/marcas/marca6.png" alt="Marca 5"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Seção de Testemunhos -->
     <section id="testimonials">
@@ -317,7 +333,7 @@
     </section>
 
     <!-- Botão de WhatsApp Fixo -->
-    <a href="https://wa.me/51992870231" target="_blank" class="whatsapp-button">
+    <a href="https://wa.me/5551992870231" target="_blank" class="whatsapp-button">
         <img src="assets/WhatsApp.svg.png" alt="WhatsApp" />
     </a>
 
@@ -340,42 +356,8 @@
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const header = document.querySelector('header');
+    <script src="/site-pet/index.js"></script>
 
-        menuToggle.addEventListener('click', () => {
-            header.classList.toggle('menu-open');
-        });
-
-        // Exibe o popup após alguns segundos ou em resposta a algum evento
-        window.onload = function () {
-            setTimeout(function () {
-                document.getElementById('promoPopup').style.display = 'flex';
-            }, 2000); // Exibe o popup após 2 segundos
-        };
-
-        // Fecha o popup quando o botão de fechar for clicado
-        document.getElementById('closePopup').onclick = function () {
-            document.getElementById('promoPopup').style.display = 'none';
-        };
-
-        // Fecha o popup se o usuário clicar fora do conteúdo
-        window.onclick = function (event) {
-            var popup = document.getElementById('promoPopup');
-            if (event.target == popup) {
-                popup.style.display = 'none';
-            }
-        };
-
-        // Seleciona o carrossel
-        const carousel = document.getElementById('carousel');
-        const clone = carousel.innerHTML; // Clona o conteúdo do carrossel
-
-        // Duplica os itens do carrossel
-        carousel.innerHTML += clone;
-    </script>
-    
 </body>
 
 </html>

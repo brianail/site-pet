@@ -1,0 +1,179 @@
+.services-section {
+    background-color: #f8f8f8; /* Fundo suave */
+    padding: 3rem 1rem; /* Espaçamento */
+    text-align: center; /* Centraliza o texto */
+    border-top: 5px solid #d63384; /* Linha superior colorida */
+    position: relative; /* Permite posicionar pseudo-elementos */
+    overflow: hidden; /* Garante que nada saia dos limites */
+  }
+  
+  .services-container {
+    max-width: 900px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção */
+  }
+  
+  .animated-title {
+    font-size: 2.5rem; /* Tamanho do título */
+    color: #d63384; /* Cor do título */
+    margin-bottom: 0.5rem; /* Espaço abaixo do título */
+    text-transform: uppercase; /* Transformação do texto para maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    animation: fadeIn 1s ease forwards; /* Animação de entrada */
+  }
+  
+  .intro-text {
+    font-size: 1.2rem; /* Tamanho do texto introdutório */
+    color: #555; /* Cor do texto */
+    margin-bottom: 2rem; /* Espaçamento abaixo do texto */
+    transition: color 0.3s ease; /* Transição suave na cor */
+    animation: slideIn 1s ease forwards; /* Animação de entrada */
+  }
+  
+  .intro-text:hover {
+    color: #d63384; /* Altera a cor ao passar o mouse */
+  }
+  
+  .services-details {
+    display: flex; /* Usar flexbox para o layout */
+    justify-content: space-between; /* Espaço entre os itens */
+    margin: 2rem 0; /* Espaçamento vertical */
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+  }
+  
+  .service {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; 
+    flex-direction: column;
+    width: 45%; /* Largura dos cards */
+    padding: 2rem; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra do card */
+    margin-bottom: 1rem; /* Espaçamento inferior */
+    text-align: center; /* Centraliza o texto dentro do card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    position: relative; /* Para o efeito de animação */
+    opacity: 0; /* Começa invisível */
+    animation: fadeInUp 1s forwards; /* Animação de entrada */
+  }
+  
+  .service:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  }
+  
+  .service-icon {
+    width: 80%; /* Tamanho do ícone */
+    height: 150px; /* Tamanho do ícone */
+    margin-bottom: 1rem; /* Espaçamento abaixo do ícone */
+  }
+  
+  .service-icon img {
+    width: 100%; /* Imagem ocupa toda a largura */
+    height: 150px; /* Altura automática para manter a proporção */
+    object-fit:cover;
+    border-radius: 20px; 
+  }
+  
+  .service-title {
+    font-size: 1.5rem; /* Tamanho do título do serviço */
+    color: #333; /* Cor do título */
+    margin-bottom: 1rem; /* Espaçamento abaixo do título */
+    transition: color 0.3s; /* Transição suave na cor */
+  }
+  
+  .service-title:hover {
+    color: #d63384; /* Altera a cor ao passar o mouse */
+  }
+  
+  .services-info {
+    font-size: 1.2rem; /* Tamanho do texto informativo */
+    color: #333; /* Cor do texto informativo */
+    margin-top: 2rem; /* Espaço acima do texto informativo */
+    animation: fadeIn 1s ease forwards; /* Animação de entrada */
+  }
+  
+  .services-section {
+    background-image: url('path/to/background-image.jpg'); /* Fundo com imagem */
+    background-size: cover; /* Cobre toda a área */
+    padding: 3rem 1rem;
+    text-align: center;
+    border-top: 5px solid #d63384;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .icon-animation {
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+  }
+  
+  .icon-animation:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone */
+  }
+  
+  .schedule-button {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #d63384;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .schedule-button:hover {
+    background-color: #b32867; /* Cor mais escura ao passar o mouse */
+  }
+  
+  .countdown-timer {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #d63384;
+    animation: fadeIn 1s ease forwards; /* Animação de entrada */
+  }
+  
+  /* Timer Display */
+  .timer-display {
+    font-weight: bold;
+    font-size: 2rem; /* Tamanho do texto do timer */
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  /* Você pode adicionar animações específicas para a contagem regressiva se necessário */
+  /* Animações */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Desloca para baixo */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Retorna à posição original */
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px); /* Desloca para a esquerda */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* Retorna à posição original */
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px); /* Desloca para baixo */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Retorna à posição original */
+    }
+  }
