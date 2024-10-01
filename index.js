@@ -74,8 +74,7 @@
             setTimeout(stopVibrating, 1000); // Para a vibração após 1 segundo
         }, 5000);
 
-
-
+        
         let currentIndex = 0;
 
         function moveSlide(direction) {
