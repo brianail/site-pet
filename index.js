@@ -49,6 +49,24 @@ window.onclick = function (event) {
     }
 };
 
+
+// JavaScript para fazer o botão vibrar automaticamente
+const whatsappButton = document.querySelector('.whatsapp-button');
+
+function startVibrating() {
+    whatsappButton.classList.add('vibrating');
+}
+
+function stopVibrating() {
+    whatsappButton.classList.remove('vibrating');
+}
+
+// Iniciar a vibração a cada 5 segundos
+setInterval(() => {
+    startVibrating();
+    setTimeout(stopVibrating, 1000); // Para a vibração após 1 segundo
+}, 5000);
+
 // Seleciona o carrossel
 const carousel = document.getElementById('carousel');
 const clone = carousel.innerHTML; // Clona o conteúdo do carrossel
