@@ -1,0 +1,230 @@
+<html lang="en"></html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pet & Gatô</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="produto.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="caminho/do/seu/favicon.ico" type="image/x-icon">
+    </head>
+<body>
+    <!-- Cabeçalho com o Logo e Menu Hambúrguer -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="assets/logo.svg" alt="Logo Pet & Gatô">
+                </a>
+            </div>
+            <nav id="nav">
+                <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="/site-pet/index.html">Home</a></li>
+                    <li><a href="/site-pet/produtos.html">Produtos</a></li>
+                    <li><a href="/site-pet/banho.html">Banho e Tosa</a></li>
+                    <li><a href="/site-pet/index.html">Avaliações</a></li>
+                    <li><a href="/site-pet/index.js">Marcas</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+   
+
+    <section class="products-section">
+        <!-- Carrinho fixo no topo -->
+        <div id="cart" class="cart-fixed">
+          <div class="cart-info">
+            <h3>Carrinho de Compras</h3>
+            <p id="total-price">Total: R$0.00</p>
+          </div>
+          <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+
+        <div id="payment-modal" class="modal">
+          <div class="modal-content">
+              <span class="close-modal">&times;</span>
+              <h3>Finalizar Compra</h3>
+              <div id="modal-cart-items"></div>
+              <h4>Forma de Pagamento</h4>
+              <label>
+                  <input type="radio" name="payment-method" value="cartao" checked> Cartão
+              </label>
+              <label>
+                  <input type="radio" name="payment-method" value="pix"> Pix
+              </label>
+              <button id="confirm-purchase">Finalizar</button>
+          </div>
+      </div>
+      
+        <!-- Container principal com filtro e galeria de produtos -->
+        <div class="main-content">
+            <!-- Filtros laterais -->
+            <aside class="filter-sidebar">
+                <div class="filter-group">
+                    <h4>Pesquisar por Nome</h4>
+                    <input type="text" id="product-search" placeholder="Pesquisar Produto">
+                </div>
+                <h3>Filtros</h3>
+                <div class="filter-group">
+                    <h4>Categorias</h4>
+                    <label><input type="checkbox" value="racao"> Ração</label>
+                    <label><input type="checkbox" value="comedouro"> Comedouro</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Ordenar por preço</h4>
+                    <select id="price-filter">
+                        <option value="low-to-high">Menor para Maior</option>
+                        <option value="high-to-low">Maior para Menor</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Galeria de produtos -->
+            <div class="product-gallery">
+                <div class="product-card">
+                    <img src="assets/cards/card1.png" alt="Ração Premium">
+                    <h3>Ração Premium</h3>
+                    <p class="product-price">R$49.90</p>
+                    <button class="add-to-cart" data-product="Ração Premium" data-price="49.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/cards/card2.png" alt="Comedouro Personalizado">
+                    <h3>Comedouro Personalizado</h3>
+                    <p class="product-price">R$89.90</p>
+                    <button class="add-to-cart" data-product="Comedouro Personalizado" data-price="89.90">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Mais produtos... -->
+            </div>
+        </div>
+      </section>
+    
+
+
+
+
+
+     <!-- Botão de WhatsApp Fixo -->
+     <a href="https://wa.me/5551992870231" target="_blank" class="whatsapp-button">
+        <img src="assets/WhatsApp.svg.png" alt="WhatsApp" />
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/shop_petegato/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/51992870231"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <p>&copy; 2024 Pet & Gatô. Todos os direitos reservados.</p>
+            <div class="autor-info">
+                <a href="https://brian-ail-portfolio.netlify.app" target="_blank">
+                    <i class="fas fa-code"></i> Desenvolvido por Brian - Analista de Dados e Desenvolvedor Web
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/site-pet/index.js"></script>
+    <script>
+        // JavaScript para fazer o botão vibrar automaticamente
+        const whatsappButton = document.querySelector('.whatsapp-button');
+
+        function startVibrating() {
+            whatsappButton.classList.add('vibrating');
+        }
+
+        function stopVibrating() {
+            whatsappButton.classList.remove('vibrating');
+        }
+
+        // Iniciar a vibração a cada 5 segundos
+        setInterval(() => {
+            startVibrating();
+            setTimeout(stopVibrating, 1000); // Para a vibração após 1 segundo
+        }, 5000);
+
+
+// Inicializa o carrinho e total
+let cart = [];
+        let totalPrice = 0;
+
+        // Adiciona produtos ao carrinho
+        function addToCart(productName, price) {
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+                existingProduct.price += price;
+            } else {
+                cart.push({ name: productName, price: price, quantity: 1 });
+            }
+            totalPrice += price;
+            renderCart();
+        }
+
+        // Renderiza os itens do carrinho
+        function renderCart() {
+            const totalPriceElement = document.getElementById('total-price');
+            totalPriceElement.innerText = `Total: R$${totalPrice.toFixed(2)}`;
+        }
+
+        // Adiciona event listener ao botão "Adicionar ao Carrinho"
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                const productPrice = parseFloat(this.getAttribute('data-price'));
+                addToCart(productName, productPrice);
+            });
+        });
+
+        // Abre o modal de finalização
+        document.getElementById('checkout-btn').onclick = function() {
+            if (cart.length === 0) {
+                alert('O carrinho está vazio! Adicione produtos antes de finalizar a compra.');
+                return;
+            }
+            const modalCartItems = document.getElementById('modal-cart-items');
+            modalCartItems.innerHTML = '';
+            cart.forEach(item => {
+                modalCartItems.innerHTML += `<p>${item.name} - R$${item.price.toFixed(2)} (x${item.quantity})</p>`;
+            });
+            document.getElementById('payment-modal').style.display = 'block';
+        };
+
+        // Fecha o modal
+        document.querySelector('.close-modal').onclick = function() {
+            document.getElementById('payment-modal').style.display = 'none';
+        };
+
+        // Fecha o modal ao clicar fora dele
+        window.onclick = function(event) {
+            const modal = document.getElementById('payment-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        // Finaliza a compra
+        document.getElementById('confirm-purchase').onclick = function() {
+            const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+        }
+    </script>
+</body>
+</html>

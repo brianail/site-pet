@@ -28,21 +28,20 @@
                     <img src="assets/logo.svg" alt="Logo Pet & Gatô">
                 </a>
             </div>
-            <nav>
-                <ul>
+            <nav id="nav">
+                <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
                     <li><a href="/site-pet/index.html">Home</a></li>
-                    <li><a href="/site-pet/index.html">Produtos</a></li>
+                    <li><a href="/site-pet/produtos.html">Produtos</a></li>
                     <li><a href="/site-pet/banho.html">Banho e Tosa</a></li>
                     <li><a href="/site-pet/index.html">Avaliações</a></li>
-                    <li><a href="/site-pet/index.html">Marcas</a></li>
+                    <li><a href="/site-pet/index.js">Marcas</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
     <section class="services-section">
@@ -125,5 +124,23 @@
     </footer>
     
     <script src="/site-pet/index.js"></script>
+    <script>
+        // JavaScript para fazer o botão vibrar automaticamente
+        const whatsappButton = document.querySelector('.whatsapp-button');
+
+        function startVibrating() {
+            whatsappButton.classList.add('vibrating');
+        }
+
+        function stopVibrating() {
+            whatsappButton.classList.remove('vibrating');
+        }
+
+        // Iniciar a vibração a cada 5 segundos
+        setInterval(() => {
+            startVibrating();
+            setTimeout(stopVibrating, 1000); // Para a vibração após 1 segundo
+        }, 5000);
+    </script>
 </body>
 </html>

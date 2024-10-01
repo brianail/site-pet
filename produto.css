@@ -1,0 +1,211 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo da seção de produtos */
+  .products-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Carrinho fixo no topo */
+  .cart-fixed {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .cart-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .checkout-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Layout principal com filtros e galeria */
+  .main-content {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Filtros laterais */
+  .filter-sidebar {
+    width: 20%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(137, 137, 141, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.filter-group h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #752C6E;
+    font-weight: 600;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    font-size: 1rem;
+    box-shadow: inset 0 4px 8px rgba(31, 38, 135, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    background: rgba(255, 255, 255, 0.6);
+    outline: none;
+}
+
+
+.filter-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(255, 255, 255, 0.3) url('data:image/svg+xml;base64,...') no-repeat right 12px center;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+  
+  /* Galeria de produtos */
+  .product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 75%;
+    padding: 20px;
+  }
+  
+  .product-card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    color: #28a745;
+    margin: 10px 0;
+  }
+  
+  .add-to-cart {
+    padding: 10px 15px;
+    background-color: #d63384;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #c82373;
+  }
+
+  .modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica na frente de tudo */
+    z-index: 1000; /* Camada acima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permite rolar se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+}
+
+.modal-content {
+    background-color: #fff; /* Fundo branco */
+    margin: 15% auto; /* Margem */
+    padding: 20px;
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 80%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima */
+}
+
+.close-modal {
+    color: #aaa; /* Cor do botão de fechar */
+    float: right; /* Alinhado à direita */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black; /* Cor ao passar o mouse */
+    text-decoration: none; /* Sem sublinhado */
+    cursor: pointer; /* Cursor pointer */
+}
+
+  @media (max-width: 890px) {
+    .main-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .filter-sidebar{
+        width: 90%;
+    }
+  }

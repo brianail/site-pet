@@ -30,21 +30,21 @@
                     <img src="assets/logo.svg" alt="Logo Pet & Gatô">
                 </a>
             </div>
-            <nav>
-                <ul>
+
+            <nav id="nav">
+                <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="/site-pet/produtos.html">Produtos</a></li>
                     <li><a href="/site-pet/banho.html">Banho e Tosa</a></li>
                     <li><a href="#testimonials">Avaliações</a></li>
                     <li><a href="#brands">Marcas</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
 
@@ -82,7 +82,11 @@
 
                 <div class="story-text">
                     <p><strong>Aproveite as nossas promoções incríveis na Pet & Gatô!</strong><br>
-                        Os melhores produtos para o seu pet, desde rações premium até brinquedos e acessórios personalizados que farão toda a diferença no bem-estar do seu companheiro de quatro patas. Nossas promoções incluem descontos especiais em arranhadores artesanais e comedouros de madeira sob medida. Não perca a chance de garantir produtos de qualidade com preços imperdíveis! Confira agora e faça parte dessa jornada de cuidados e carinho com seu pet.</p>
+                        Os melhores produtos para o seu pet, desde rações premium até brinquedos e acessórios
+                        personalizados que farão toda a diferença no bem-estar do seu companheiro de quatro patas.
+                        Nossas promoções incluem descontos especiais em arranhadores artesanais e comedouros de madeira
+                        sob medida. Não perca a chance de garantir produtos de qualidade com preços imperdíveis! Confira
+                        agora e faça parte dessa jornada de cuidados e carinho com seu pet.</p>
                 </div>
             </div>
         </div>
@@ -107,132 +111,74 @@
         </div>
     </section>
 
+
+    </div>
     <!-- Produtos Section -->
     <section id="products">
         <div class="container">
-            <h2>Nossos Produtos</h2>
-            <div class="product-gallery">
 
-                <div class="product">
-                    <img src="assets/cards/card1.png" alt="Comedouro de madeira personalizado">
-                    <h3>Comedouro Personalizado</h3>
-                    <p>Design elegante e funcional, feito à mão para o conforto do seu pet.</p>
+            <h2>Produtos em destaque</h2>
+            <div id="product">
+                <div class="product-carousel">
+                    <div class="product-gallery">
+
+                        <div class="product">
+                            <img src="assets/cards/card1.png" alt="Comedouro de madeira personalizado">
+                            <h3>Comedouro Personalizado</h3>
+                            <p>Design elegante e funcional, feito à mão para o conforto do seu pet.</p>
+                            <button class="add-to-cart" data-product="Comedouro Personalizado"
+                                data-price="49.90">Adicionar
+                                ao
+                                Carrinho</button>
+                        </div>
+
+                        <div class="product">
+                            <img src="assets/cards/card2.png" alt="Arranhador artesanal">
+                            <h3>Arranhador Artesanal</h3>
+                            <p>Arranhadores robustos e bonitos, perfeitos para o seu gato.</p>
+                        </div>
+
+                        <div class="product">
+                            <img src="assets/cards/card3.png" alt="Brinquedos para cães e gatos">
+                            <h3>Brinquedos de Qualidade</h3>
+                            <p>Brinquedos duráveis e criativos para garantir a diversão do seu pet.</p>
+                        </div>
+
+                        <div class="product">
+                            <img src="assets/cards/card16.png" alt="Ração Premium">
+                            <h3>Ração Premium</h3>
+                            <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
+                        </div>
+
+                        <div class="product">
+                            <img src="assets/cards/card17.png" alt="Ração Premium">
+                            <h3>Ração Premium</h3>
+                            <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
+                        </div>
+
+                        <div class="product">
+                            <img src="assets/cards/card18.png" alt="Ração Premium">
+                            <h3>Ração Premium</h3>
+                            <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
+                        </div>
+
+                        <div class="product">
+                            <img src="assets/cards/card20.png" alt="Ração Premium">
+                            <h3>Ração Premium</h3>
+                            <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
+                        </div>
+
+                        <div class="product">
+                            <img src="assets/cards/card6.png" alt="Ração Premium">
+                            <h3>Ração Premium</h3>
+                            <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
+                        </div>
+
+                       
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
-
-                <div class="product">
-                    <img src="assets/cards/card2.png" alt="Arranhador artesanal">
-                    <h3>Arranhador Artesanal</h3>
-                    <p>Arranhadores robustos e bonitos, perfeitos para o seu gato.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card3.png" alt="Brinquedos para cães e gatos">
-                    <h3>Brinquedos de Qualidade</h3>
-                    <p>Brinquedos duráveis e criativos para garantir a diversão do seu pet.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card16.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card17.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card18.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card20.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card21.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card22.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card4.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card5.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card6.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card8.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card9.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card10.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card11.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card12.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card13.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card14.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
-                <div class="product">
-                    <img src="assets/cards/card15.png" alt="Ração Premium">
-                    <h3>Ração Premium</h3>
-                    <p>Somente as melhores rações para garantir a saúde e felicidade do seu animal.</p>
-                </div>
-
             </div>
         </div>
     </section>
@@ -271,7 +217,7 @@
         </div>
     </section>
 
-    
+
 
     <!-- Seção de Testemunhos -->
     <section id="testimonials">
@@ -357,7 +303,24 @@
     </footer>
 
     <script src="/site-pet/index.js"></script>
+    <script>
+        // JavaScript para fazer o botão vibrar automaticamente
+        const whatsappButton = document.querySelector('.whatsapp-button');
 
+        function startVibrating() {
+            whatsappButton.classList.add('vibrating');
+        }
+
+        function stopVibrating() {
+            whatsappButton.classList.remove('vibrating');
+        }
+
+        // Iniciar a vibração a cada 5 segundos
+        setInterval(() => {
+            startVibrating();
+            setTimeout(stopVibrating, 1000); // Para a vibração após 1 segundo
+        }, 5000);
+    </script>
 </body>
 
 </html>
